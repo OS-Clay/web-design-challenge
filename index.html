@@ -110,9 +110,9 @@
  
 
  
- .navbar .dropdown:hover .dropdown-content {display:block;}
+.dropdown:hover .dropdown-content {display:block;}
  
- .dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: #ddd;}
  
  
   
@@ -124,23 +124,25 @@
 
 
 <body>
-<div class="topnav">
- <li> <a href="index.html">Home</a></li>
- <li> <a href="comp.html">Comparisons</a> </li>
- <li> <a href="data.html">Data</a></li>
- 
-  
- <li class="dropdown"> Vxxxzz </li>
-             
-        <div class="dropdown-content">
-          <a> href="wind-viz.html">Windiness</a>
-          <a>href="hum-viz.html">Humidity</a>
-         <a> href="cloud-viz.html">Cloudiness</a>
-         <a> href="temp-viz.html">Temperature</a>
-        </div>
-  </div>
+<nav class="navbar navbar-default">
+ <div class = "container-fluid">
+      <ul class="nav navbar-nav">
+      <li> <a href="index.html">Home</a></li>
+      <li><a href="comp.html">Comparisons</a> </li>
+      <li><a href="data.html">Data</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="wind-viz.html">Page 1 <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="wind-viz.html">Windiness</a></li>
+          <li><a href="hum-viz.html">Humidity</a></li>
+          <li><a href="cloud-viz.html">Cloudiness</a></li>
+         <li><a href="temp-viz.html">Temperature</a></li>
+        </ul>
+      </li>
+    </ul
       
-  </div> 
+ </div> 
+       </nav>
+
   
 
   
