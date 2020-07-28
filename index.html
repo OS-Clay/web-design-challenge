@@ -17,7 +17,6 @@
 nav {
   background-color: #333;
   overflow: hidden;
- display: inline-block;
 }
  
 nav a {
@@ -38,9 +37,12 @@ nav a.active {
   background-color: #4CAF50;
   color: white;
 }
+ 
+nav li{
+ display:inline;}
   
 .navbar ul {
- display:inline;}
+ display:none;}
  
 
 
@@ -63,20 +65,8 @@ nav a.active {
   text-align: left;
 }
 
- .dropdown-menu a:hover {
-  background-color: #ddd;
-}
-
- .navbar a:hover, .dropdown:hover .dropdown-content {
-  background-color: green;
-}
-
- 
-
- 
-.dropdown:hover .dropdown-content {display:block;}
- 
-.dropdown-content a:hover {background-color: #ddd;}
+ .dropdown:hover ul{
+  display:block;}
  
  
   
