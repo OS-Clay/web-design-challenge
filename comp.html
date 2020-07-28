@@ -5,23 +5,30 @@
 <head>
 <meta charset = "UTF8">
 
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+ 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+
 <title> Data Visualization </title>
 
 <style>
-.topnav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
 
-}
+@media (450px):
+  .col-md-6 :
+  
 
-.topnav {
+
+nav {
   background-color: #333;
   overflow: hidden;
 }
+ 
 
-.topnav a {
+ 
+
+nav a {
   float: left;
   color: #f2f2f2;
   text-align: center;
@@ -29,41 +36,30 @@
   text-decoration: none;
   font-size: 17px;
 }
+ 
+.nav li {float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+ font-size: 17px;
+ display: inline-block;}
 
-.topnav a:hover {
+nav a:hover {
   background-color: #ddd;
   color: black;
 }
 
-.topnav a.active {
+nav a.active {
   background-color: #4CAF50;
   color: white;
 }
   
-  /* The dropdown container */
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
 
-/* Dropdown button */
-.dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
-}
-
-/* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover, .dropdown:hover .dropdown-content {
   background-color: green;
 }
 
-/* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -73,8 +69,8 @@
   z-index: 1;
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
+
+.dropdown-menu a {
   float: none;
   color: black;
   padding: 12px 16px;
@@ -83,15 +79,22 @@
   text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
+
+.dropdown-menu a:hover {
   background-color: #ddd;
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+
+ 
+
+ 
+.dropdown:hover .dropdown-content {display:block;}
+ 
+.dropdown-content a:hover {background-color: #ddd;}
+ 
+ 
+  
+
 </style>
 
 
@@ -99,41 +102,51 @@
 
 
 <body>
-<div class="topnav">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="comp.html">Comparisons</a></li>
-  <li><a href="data.html">Data</a></li>
-   
-  
- <div class="dropdown">
-    <button class="dropbtn">Visualizations 
-      <i class="fa fa-caret-down"></i>
-    </button>
-   <div class="dropdown-content">
-      <a href="hum-viz.html">Humidity</a>
-      <a href="cloud-viz.html">Cloudines</a>
-      <a href="temp-viz.html">Temperature</a>
-      <a href="wind-viz.html">Windiness</a>
-    </div> 
-    
-   
-  </div> 
-</div>
+<nav class="navbar navbar-default">
+ <div class = "container-fluid">
+      <ul class="nav navbar-nav">
+      <li> <a href="index.html">Home</a></li>
+      <li><a href="comp.html">Comparisons</a> </li>
+      <li><a href="data.html">Data</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="wind-viz.html">Visualization <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="wind-viz.html">Windiness</a></li>
+          <li><a href="hum-viz.html">Humidity</a></li>
+          <li><a href="cloud-viz.html">Cloudiness</a></li>
+         <li><a href="temp-viz.html">Temperature</a></li>
+        </ul>
+      </li>
+    </ul
+      
+ </div> 
+       </nav>
+
   
   <h1> this is the comparisons page, click around to see some stuff </h1>
   
- 
+ <div class = "container">
+   
+   <div class = "row">
+     <div class = "col-md-6">
     <img class = "fig" id = "temp-fig" src = "temp_scat.png">
+     </div>
   
-  
+    <div class= "col-md-6">
     <img class = "figure id = "wind-fig" src = "wind_scat.png">
+                                                              </div>
+                                                              </div>
+                                                              
    
-   
+   <div class ="row">
+                    <div class= "col-md-6">
      <img class = "figure" id = "cloud-fig" src = "cloud_scat.png">
-  
-
+                                                                  </div>
+                                                                  
+<div class = "col-md-6">
      <img class = "figure" id = "hum-fig" src="hum_scat.png">
-                      
+                                                            </div>
+                                                            </div>
+                                                            </div>
                                                                                                  
 
   
