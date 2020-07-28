@@ -93,8 +93,10 @@
 }
 
 /* Show the dropdown menu on hover */
- .nav-item-dropdown:hover .dropdown-menu{
-  display:block;}
+ .dropdown-content a:hover {background-color: #ddd;}
+ 
+ li .dropdown:hover .dropdown-content {display:block;}
+  
 
 </style>
 
@@ -107,8 +109,8 @@
   <li><a href="index.html">Home</a></li>
   <li><a href="comp.html">Comparisons</a></li>
   <li><a href="data.html">Data</a></li>
- <li class="nav-item dropdown"><a>Visualization</a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+ <li class="dropdown"><a>Visualization</a>
+        <div class="dropdown-content" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="wind-viz.html">Windiness</a>
           <a class="dropdown-item" href="hum-viz.html">Humidity</a>
          <a class="dropdown-item" href="cloud-viz.html">Cloudiness</a>
